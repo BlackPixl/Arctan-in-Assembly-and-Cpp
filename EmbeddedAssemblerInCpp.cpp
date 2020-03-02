@@ -1,15 +1,14 @@
-// EmbeddedAssembler.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include <iostream>
+#include <string>
+#include <cmath>
 using namespace std;
 
 
 int main(){
-	int x;
-	int a;
-	int m;
-	int resultado = 0;
+	double x;
+	double a;
+	double m;
+	double resultado = 0;
 	cout << "ingrese el valor de \"x\" para el cual se calculara el valor de arctan(x/a): ";
 	cin >> x;
 	cout << "ingrese el valor del divisor \"a\" para el cual se calculara el valor de arctan(x/a): ";
@@ -17,7 +16,15 @@ int main(){
 	cout << "ingrese el numero de terminos \"m\" que se usaran para calcular la serie: ";
 	cin >> m;
 
-	_asm {/*aquí irá todo el código ensamblador*/}
+	for (int i = 0; i <= m; i++)
+	{
+		resultado = resultado + ((pow(-1, i)) / ((2 * i) + 1)) *(pow((x / a), ((2*i)+1)));
+	}
+
+	_asm
+	{
+		/*aqui va todo el codigo ensamblador*/
+	}
 
 	cout << "el valor de arctan(" << x << "/" << a << ") "<< "es: " << resultado;
 
