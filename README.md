@@ -8,7 +8,7 @@ This project was made for the course "Computer Architecture" from the National U
 
 * [Irvine Library](http://asmirvine.com/)
 
-## Creators
+### Creators
 
 * [BlackPixl](https://github.com/BlackPixl)
 * [csalazarj](https://github.com/csalazarj)
